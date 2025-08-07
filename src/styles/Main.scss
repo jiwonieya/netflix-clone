@@ -1,0 +1,24 @@
+.banner{
+  width: 60%;
+  margin: 0 auto;
+  @include tablet{width: 100%;}
+  @include mobile{width: 100%;}
+  height: calc(90vh - 100px);
+  @include flex-layout(column);
+  h1 {
+    margin: 1rem 0;
+    font-size: 4rem;
+  }
+  p {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: $font-medium;
+  }
+}
+section{
+  width: 70%;
+  @include tablet{
+    width: 90%;
+  }
+  margin: 0 auto;
+}

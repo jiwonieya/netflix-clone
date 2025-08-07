@@ -1,0 +1,71 @@
+.detail-bar {
+  @include flex-layout(row);
+  gap: 2rem;
+  transition: 0.5s;
+  @include tablet{
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+.detail-icon {
+  font-size: 100px;
+}
+.detail-txt {
+  font-size: $font-medium;
+  border-radius: 10px;
+  padding: 2rem;
+  background-image: linear-gradient(45deg, #2c073d, #1a0252);
+  flex: 1;
+  @include flex-layout(row);
+  @include tablet{
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+  }
+  p {
+    flex: 1;
+  }
+  button {
+    @include btn-style(#777);
+  }
+}
+
+.curve-wrap {
+  position: relative;
+  top: 0;
+  height: 50px;
+  overflow: hidden;
+  div {
+    border-top-left-radius: 90% 100%;
+    border-top-right-radius: 90% 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+  }
+  .curve-circle {
+    top: 3px;
+    z-index: 2;
+    background: radial-gradient(
+        50% 500% at 50% -420%,
+        rgba(64, 97, 231, 0.4) 80%,
+        rgba(16, 16, 16, 0.1) 100%
+      ),
+      $bg-color;
+  }
+  .gradient-line {
+    top: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(131, 58, 180, 0.1) 0%,
+      rgba(198, 42, 96, 0.7) 33%,
+      rgba(198, 42, 96, 0.7) 65%,
+      rgba(131, 58, 180, 0.1) 100%
+    );
+  }
+}

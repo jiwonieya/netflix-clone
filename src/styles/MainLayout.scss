@@ -1,0 +1,32 @@
+.main-wrap {
+  height: 95vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url(../assets/bg-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  header {
+    height: 100px;
+    max-width: $large-size;
+    margin: 0 auto;
+    @include flex-layout(row,space-between,center);
+  }
+  .logo-img {
+    width: 200px;
+  }
+  .lang{
+    @include flex-layout();
+    gap: 1rem;
+    select{
+      padding: 0.5rem 1rem;
+      outline: none;
+    }
+    button{
+      @include btn-style();
+    }
+  }
+}

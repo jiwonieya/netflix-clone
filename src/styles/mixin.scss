@@ -1,0 +1,57 @@
+@mixin flex-layout($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin btn-style($bg: $main-color, $font: $font-small) {
+  background-color: $bg;
+  border-radius: 3px;
+  color: $text-color;
+  font-size: $font;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+@mixin floation-label {
+  position: relative;
+  cursor: text;
+  input {
+    width: 100%;
+    padding: 15px 10px 6px;
+    background-color: transparent;
+    border: 1px solid #777;
+    border-radius: 5px;
+    color: $text-color;
+    font-size: $font-medium;
+  }
+  input:focus + span,
+  input:valid + span
+  {
+    top: 0;
+    font-size: 10px;
+  }
+  span {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    color: #888;
+    transition: 0.5s;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width:$medium-size){
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width:$small-size){
+    @content;
+  }
+}
+

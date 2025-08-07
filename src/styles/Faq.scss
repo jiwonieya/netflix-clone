@@ -1,0 +1,36 @@
+.faq {
+  h2 {
+    font-size: 2rem;
+  }
+  ul {
+    font-size: 1.5rem;
+    li {
+        margin: 0.5rem 0;
+      div {
+        position: relative;
+        z-index: 5;
+        background-color: #444;
+        padding: 1rem;
+        margin-bottom: 0.3rem;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover{
+          background-color: #555;
+        }
+      }
+      p{
+        background-color: #444;
+        white-space: pre-line;
+        line-height: 1.5;
+        height: 0;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      p.open{
+        padding: 1rem;
+        height: auto;
+        opacity: 1;
+      }
+    }
+  }
+}
